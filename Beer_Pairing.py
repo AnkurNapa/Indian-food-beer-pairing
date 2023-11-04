@@ -34,7 +34,7 @@ def suggest_multiple_beer_pairing_with_styles(food_name, beer_data, food_data, n
 # Streamlit App
 st.title("Beer Pairing with Indian Food")
 selected_food = st.selectbox("Choose a food item:", food_data['name'].unique())
-if st.button("Get Beer Pairings"):
+if st.button("🍺Get Beer Pairings"):
     results = suggest_multiple_beer_pairing_with_styles(selected_food, beer_data, food_data)
     for beer_name, beer_description in results:
         st.write(f"**{beer_name}** - {beer_description}")
